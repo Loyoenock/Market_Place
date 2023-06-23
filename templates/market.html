@@ -35,7 +35,30 @@
           </ul>
  		    </div>
 	  </nav>
-    <h1>Home Page</h1>
+      <h1>Market Page</h1>
+      <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <!-- Your Columns HERE -->
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Barcode</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Your rows inside the table HERE: -->
+          {% for item in items %}
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.bardcode }}</td>
+              <td> ugx - {{ item.price }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
 
